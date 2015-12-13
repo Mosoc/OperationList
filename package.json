@@ -1,24 +1,25 @@
-
 {
   "name": "operationlist",
   "version": "0.1.0",
-  "description": "",
+  "description": "operation list",
   "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.10.2",
-    "express": "^4.11.1",
-    "mongojs": "^0.18.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Hello World\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Mosoc/OperationList.git"
   },
-  "author": "Mosoc",
+  "dependencies":
+  {
+    "express":"*",
+    "body-parser":"*",
+    "mongojs":"*"
+  },
+  "author": "Mosochin Colle",
   "license": "MIT",
-  "homepage": "https://github.com/Mosoc/"
+  "bugs": {
+    "url": "https://github.com/Mosoc/OperationList/issues"
+  },
+  "homepage": "https://github.com/Mosoc/OperationList#readme"
 }
