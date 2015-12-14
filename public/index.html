@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html ng-app>
+<html ng-app="myApp">
 <head>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,13 +10,29 @@
     <title>El psy congroo</title>
 </head>    
 <body>
-    <div class = "container">
+    <div class = "container" ng-controller="AppCtrl">
     <h1>Operation List</h1>
-    <input ng-model="test">
-    {{test}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="operation in operationlist">
+                <td>{{operation.title}}</td>
+                <td>{{operation.type}}</td>
+                <td>{{operation.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
     </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
 </body>
 </html>
