@@ -1,6 +1,7 @@
 var myApp = angular.module('myApp', []); 
 myApp.controller('AppCtrl', ['$scope', '$http', 
 function($scope, $http) { console.log("Hello World from controller");
+$http.get('/operationlist');
     operation1 = {
         title: 'hekate',
         type: 'A',
