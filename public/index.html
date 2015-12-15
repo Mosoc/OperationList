@@ -11,24 +11,28 @@
 </head>    
 <body>
     <div class = "container" ng-controller="AppCtrl">
-    <h1>Operation List</h1>
+    <div class = "panel panel-default">
+    <div class = "panel-heading"><h1>Operation List</h1></div>
     <table class="table">
         <thead>
             <tr>
                 <th>Title</th>
                 <th>Type</th>
                 <th>Description</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
+
             <tr ng-repeat="operation in operationlist">
                 <td>{{operation.title}}</td>
                 <td>{{operation.type}}</td>
                 <td>{{operation.description}}</td>
+                <td><button class="btn btn-default" ng-click="">Edit</td>
             </tr>
         </tbody>
     </table>
-    
+    </div>
     </div>
 
 

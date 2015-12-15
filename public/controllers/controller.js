@@ -6,4 +6,8 @@ $http.get('/operationlist').success(function(response){
     $scope.operationlist = response;
 });
 
+$scope.addOperation = function(){
+  console.log($scope.operation);  
+};
+
 }]); 
