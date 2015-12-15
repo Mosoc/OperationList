@@ -23,7 +23,12 @@
             </tr>
         </thead>
         <tbody>
-
+            <tr>
+                <td><input class="form-control" ng-model="operation.title"></td>
+                <td><input class="form-control" ng-model="operation.type"></td>
+                <td><input class="form-control" ng-model="operation.description"></td>
+                <td><button class="btn btn-success" ng-click="addOperation()">Add Operation</td>
+            </tr>
             <tr ng-repeat="operation in operationlist">
                 <td>{{operation.title}}</td>
                 <td>{{operation.type}}</td>
