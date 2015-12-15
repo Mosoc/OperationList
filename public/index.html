@@ -20,6 +20,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 <th>Action</th>
+                <th>&nbsp;</th>
             </tr>
         </thead>
         <tbody>
@@ -28,12 +29,15 @@
                 <td><input class="form-control" ng-model="operation.type"></td>
                 <td><input class="form-control" ng-model="operation.description"></td>
                 <td><button class="btn btn-success" ng-click="addOperation()">Add Operation</td>
+                 <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
+                 <button class="btn btn-info" ng-click="deselect()">Clear</button></td>
             </tr>
             <tr ng-repeat="operation in operationlist">
                 <td>{{operation.title}}</td>
                 <td>{{operation.type}}</td>
                 <td>{{operation.description}}</td>
-                <td><button class="btn btn-default" ng-click="">Edit</td>
+                <td><button class="btn btn-default" ng-click="editOperation(operation._id)">Edit</td>
+                <td><button class="btn btn-danger"  ng-click="deleteOperation(operation._id)">Delete</td>
             </tr>
         </tbody>
     </table>

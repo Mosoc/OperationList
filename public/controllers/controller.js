@@ -20,4 +20,11 @@ $scope.addOperation = function(){
   });
 };
 
+$scope.deleteOperation = function(id) {
+  console.log(id);
+  $http.delete('/operationlist/' + id).success(function(response) {
+    refresh();
+  });
+};
+
 }]); 
